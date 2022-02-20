@@ -28,7 +28,7 @@ public class ElectricKettle extends Appliances {
         this.energyEfficiency = energyEfficiency;
     }
 
-    public double getVolumeMillilitres() {
+    public int getVolumeMillilitres() {
         return volumeMillilitres;
     }
 
