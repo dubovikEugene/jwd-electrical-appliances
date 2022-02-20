@@ -10,6 +10,7 @@ public class FridgeValidator implements Validator<Fridge> {
         validateWeight(fridge.getWeight());
         validateWidth(fridge.getWidth());
         validateHeight(fridge.getHeight());
+        validateUsefulVolume(fridge.getUsefulVolume());
 
     }
 
