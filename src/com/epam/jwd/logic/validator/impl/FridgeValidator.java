@@ -24,7 +24,7 @@ public class FridgeValidator implements Validator<Fridge> {
 
     private void validateWeight(double weight) {
         final double minWeight = 3.5;
-        final double maxWeight = 201;
+        final double maxWeight = 201.0;
         if (weight <= minWeight || weight >= maxWeight) {
             throw new IllegalArgumentException("weight invalid value");
         }

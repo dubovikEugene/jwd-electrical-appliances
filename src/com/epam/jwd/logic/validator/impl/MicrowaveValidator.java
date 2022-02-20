@@ -24,7 +24,7 @@ public class MicrowaveValidator implements Validator<Microwave> {
 
     private void validateWeight(double weight) {
         final double minWeight = 7.8;
-        final double maxWeight = 41;
+        final double maxWeight = 41.0;
         if (weight <= minWeight || weight >= maxWeight) {
             throw new IllegalArgumentException("weight invalid value");
         }
