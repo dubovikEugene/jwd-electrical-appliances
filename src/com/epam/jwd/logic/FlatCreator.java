@@ -8,27 +8,38 @@ import com.epam.jwd.entity.enums.Brand;
 import com.epam.jwd.entity.enums.EnergyEfficiency;
 import com.epam.jwd.entity.enums.NoFrost;
 import com.epam.jwd.entity.flat.Flat;
+import com.epam.jwd.logic.validator.Validator;
+import com.epam.jwd.logic.validator.impl.ElectricKettleValidator;
 
 public class FlatCreator {
     private final Flat flat = new Flat();
+    ElectricKettleValidator electricKettleValidator = new ElectricKettleValidator();
 
     public Flat createFlat() {
-        flat.addAppliance(new ElectricKettle(1500,
+        ElectricKettle firstElectricKettle = new ElectricKettle(1500,
                 Brand.BEKO,
                 1.5,
                 true,
                 15,
                 25,
                 EnergyEfficiency.A_PLUS,
-                1700));
-        flat.addAppliance(new ElectricKettle(700,
-                Brand.BRAUN,
+                1700);
+
+        electricKettleValidator.validate(firstElectricKettle);
+
+        ElectricKettle secondElectricKettle = new ElectricKettle(1500,
+                Brand.BEKO,
                 1.5,
-                false,
+                true,
                 15,
                 25,
                 EnergyEfficiency.A_PLUS,
-                1700));
+                1700);
+
+        electricKettleValidator.validate(secondElectricKettle);
+
+        flat.addAppliance(firstElectricKettle);
+        flat.addAppliance(secondElectricKettle);
         flat.addAppliance(new Microwave(1200,
                 Brand.SAMSUNG,
                 12.0,
