@@ -10,10 +10,6 @@ public class Microwave extends Appliances {
     private Boolean touchControl;
     private EnergyEfficiency energyEfficiency;
 
-    public Microwave(int powerConsumption, Brand brand, double weight, boolean enabled, int width, int height) {
-        super(powerConsumption, brand, weight, enabled, width, height);
-    }
-
     public Microwave(int powerConsumption,
                      Brand brand,
                      double weight,
