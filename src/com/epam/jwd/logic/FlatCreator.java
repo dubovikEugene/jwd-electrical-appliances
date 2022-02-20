@@ -10,8 +10,9 @@ import com.epam.jwd.entity.enums.NoFrost;
 import com.epam.jwd.entity.flat.Flat;
 
 public class FlatCreator {
-    public Flat createFlat(){
-        Flat flat = new Flat();
+    private final Flat flat = new Flat();
+
+    public Flat createFlat() {
         flat.addAppliance(new ElectricKettle(1500,
                 Brand.BEKO,
                 1.5,
@@ -59,6 +60,6 @@ public class FlatCreator {
                 NoFrost.FULL_NO_FROST,
                 290,
                 true));
-    return flat;
+        return flat;
     }
 }
