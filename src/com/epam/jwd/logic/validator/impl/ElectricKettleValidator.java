@@ -38,7 +38,7 @@ public class ElectricKettleValidator implements Validator<ElectricKettle> {
         }
     }
 
-    private void validateHeight(double height) {
+    private void validateHeight(int height) {
         final int minHeight = 1;
         if (height <= minHeight) {
             throw new IllegalArgumentException("height invalid value");
