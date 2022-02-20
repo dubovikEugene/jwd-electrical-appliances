@@ -1,6 +1,7 @@
 package com.epam.jwd;
 
 import com.epam.jwd.comparator.AppliancesByPowerConsumptionComparator;
+import com.epam.jwd.entity.enums.Brand;
 import com.epam.jwd.entity.flat.Flat;
 import com.epam.jwd.logic.FlatCreator;
 import com.epam.jwd.logic.PowerConsumptionInFlat;
@@ -16,10 +17,14 @@ public class App {
         System.out.println(flat.toString() + "\n");
         System.out.println(PowerConsumptionInFlat.powerConsumptionEnabledAppliances(flat));
         flat.getListAppliances().sort(new AppliancesByPowerConsumptionComparator());
-        System.out.println(flat.toString());
+        System.out.println(flat);
+
+        flat.
 
         SearchAppliances sa = new SearchAppliances();
-        System.out.println(sa.findBy(Operator.LARGER_THAN, 1200, flat));
+        System.out.println(sa.findBy(Operator.LARGER_THAN, 1200, flat) + "\n");
+        System.out.println(sa.findBy(Operator.LESS_THAN, 15.0, flat) + "\n");
+        System.out.println(sa.findBy(Brand.SAMSUNG, flat) + "\n");
 
     }
 }
