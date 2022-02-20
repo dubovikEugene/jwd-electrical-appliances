@@ -31,7 +31,7 @@ public class ElectricKettleValidator implements Validator<ElectricKettle> {
         }
     }
 
-    private void validateWidth(double width) {
+    private void validateWidth(int width) {
         final int minWidth = 1;
         if (width <= minWidth) {
             throw new IllegalArgumentException("width invalid value");
