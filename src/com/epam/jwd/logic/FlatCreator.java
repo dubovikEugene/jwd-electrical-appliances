@@ -11,12 +11,15 @@ import com.epam.jwd.entity.flat.Flat;
 import com.epam.jwd.logic.validator.impl.ElectricKettleValidator;
 import com.epam.jwd.logic.validator.impl.FridgeValidator;
 import com.epam.jwd.logic.validator.impl.MicrowaveValidator;
+import com.epam.jwd.logic.validator.impl.WashingMachineValidator;
 
 public class FlatCreator {
     private final Flat flat = new Flat();
     private final ElectricKettleValidator electricKettleValidator = new ElectricKettleValidator();
     private final FridgeValidator fridgeValidator = new FridgeValidator();
     private final MicrowaveValidator microwaveValidator = new MicrowaveValidator();
+    private final WashingMachineValidator washingMachineValidator = new WashingMachineValidator();
+
 
     public Flat createFlat() {
         ElectricKettle firstElectricKettle = new ElectricKettle(1500,
@@ -76,11 +79,7 @@ public class FlatCreator {
                 EnergyEfficiency.A_PLUS);
         microwaveValidator.validate(secondMicrowave);
 
-        flat.addAppliance(firstElectricKettle);
-        flat.addAppliance(secondElectricKettle);
-        flat.addAppliance(firstMicrowave);
-        flat.addAppliance(secondMicrowave);
-        flat.addAppliance(new WashingMachine(1200,
+        WashingMachine firstWashingMachine = new WashingMachine(1200,
                 Brand.ATLANT,
                 25.5,
                 true,
@@ -89,12 +88,17 @@ public class FlatCreator {
                 EnergyEfficiency.A_PLUS,
                 10,
                 45,
-                1200));
+                1200);
+        washingMachineValidator.validate(firstWashingMachine);
+
+        flat.addAppliance(firstElectricKettle);
+        flat.addAppliance(secondElectricKettle);
+        flat.addAppliance(firstMicrowave);
+        flat.addAppliance(secondMicrowave);
+        flat.addAppliance(firstWashingMachine);
         flat.addAppliance(firstFridge);
+
         return flat;
     }
 
-    private void initAppliances(){
-
-    }
 }
