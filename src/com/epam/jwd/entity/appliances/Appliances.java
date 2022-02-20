@@ -1,7 +1,6 @@
 package com.epam.jwd.entity.appliances;
 
 import com.epam.jwd.entity.enums.Brand;
-import com.epam.jwd.logic.search.criteria.SearchCriteria;
 
 public abstract class Appliances {
     private int powerConsumption;
