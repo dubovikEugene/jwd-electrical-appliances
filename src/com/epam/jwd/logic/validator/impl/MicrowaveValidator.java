@@ -50,7 +50,7 @@ public class MicrowaveValidator implements Validator<Microwave> {
         final int minVolumeLitres = 13;
         final int maxVolumeLitres = 53;
         if (volumeLitres <= minVolumeLitres || volumeLitres >= maxVolumeLitres) {
-            throw new IllegalArgumentException("height invalid value");
+            throw new IllegalArgumentException("volumeLitres invalid value");
         }
     }
 
@@ -58,7 +58,7 @@ public class MicrowaveValidator implements Validator<Microwave> {
         final int minMicrowavesPower = 500;
         final int maxMicrowavesPower = 1200;
         if (microwavesPower <= minMicrowavesPower || microwavesPower >= maxMicrowavesPower) {
-            throw new IllegalArgumentException("height invalid value");
+            throw new IllegalArgumentException("microwavesPower invalid value");
         }
     }
 }
