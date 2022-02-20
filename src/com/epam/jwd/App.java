@@ -19,8 +19,6 @@ public class App {
         flat.getListAppliances().sort(new AppliancesByPowerConsumptionComparator());
         System.out.println(flat);
 
-        flat.
-
         SearchAppliances sa = new SearchAppliances();
         System.out.println(sa.findBy(Operator.LARGER_THAN, 1200, flat) + "\n");
         System.out.println(sa.findBy(Operator.LESS_THAN, 15.0, flat) + "\n");
