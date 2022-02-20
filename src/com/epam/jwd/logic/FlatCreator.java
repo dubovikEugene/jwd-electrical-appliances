@@ -10,10 +10,12 @@ import com.epam.jwd.entity.enums.NoFrost;
 import com.epam.jwd.entity.flat.Flat;
 import com.epam.jwd.logic.validator.Validator;
 import com.epam.jwd.logic.validator.impl.ElectricKettleValidator;
+import com.epam.jwd.logic.validator.impl.FridgeValidator;
 
 public class FlatCreator {
     private final Flat flat = new Flat();
-    ElectricKettleValidator electricKettleValidator = new ElectricKettleValidator();
+    private final ElectricKettleValidator electricKettleValidator = new ElectricKettleValidator();
+    private final FridgeValidator fridgeValidator = new FridgeValidator();
 
     public Flat createFlat() {
         ElectricKettle firstElectricKettle = new ElectricKettle(1500,
@@ -24,7 +26,6 @@ public class FlatCreator {
                 25,
                 EnergyEfficiency.A_PLUS,
                 1700);
-
         electricKettleValidator.validate(firstElectricKettle);
 
         ElectricKettle secondElectricKettle = new ElectricKettle(1500,
@@ -35,8 +36,18 @@ public class FlatCreator {
                 25,
                 EnergyEfficiency.A_PLUS,
                 1700);
-
         electricKettleValidator.validate(secondElectricKettle);
+
+        Fridge firstFridge = new Fridge(45,
+                Brand.SAMSUNG,
+                55.5,
+                true,
+                60,
+                180,
+                NoFrost.FULL_NO_FROST,
+                290,
+                true);
+        fridgeValidator.validate(firstFridge);
 
         flat.addAppliance(firstElectricKettle);
         flat.addAppliance(secondElectricKettle);
@@ -62,15 +73,11 @@ public class FlatCreator {
                 10,
                 45,
                 1200));
-        flat.addAppliance(new Fridge(1250,
-                Brand.SAMSUNG,
-                13.0,
-                true,
-                60,
-                180,
-                NoFrost.FULL_NO_FROST,
-                290,
-                true));
+        flat.addAppliance(firstFridge);
         return flat;
+    }
+
+    private void initAppliances(){
+
     }
 }
