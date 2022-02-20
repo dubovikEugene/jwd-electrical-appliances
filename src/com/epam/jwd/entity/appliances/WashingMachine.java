@@ -26,12 +26,6 @@ public class WashingMachine extends Appliances {
         setSpin(spin);
     }
 
-    public boolean washClothes(int someParams) {
-        System.out.println("wash clothes");
-//      Some realization
-        return true;
-    }
-
     public EnergyEfficiency getEnergyEfficiency() {
         return energyEfficiency;
     }
