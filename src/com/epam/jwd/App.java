@@ -8,8 +8,19 @@ import com.epam.jwd.logic.PowerConsumptionInFlat;
 import com.epam.jwd.logic.search.Operator;
 import com.epam.jwd.logic.search.SearchAppliances;
 
-
+/**
+ * Main class of App
+ *
+ * @author Yauheni Dubovik
+ */
 public class App {
+
+    /**
+     * Main method of App, creating Flat with Appliances inside
+     * and check how is work all logic
+     *
+     * @param args command line values
+     */
     public static void main(String[] args) {
         FlatCreator flatCreator = new FlatCreator();
         Flat flat = flatCreator.createFlat();
