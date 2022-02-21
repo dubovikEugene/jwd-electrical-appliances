@@ -8,6 +8,11 @@ import com.epam.jwd.logic.validator.Validator;
  * and check fields of ElectricKettle to correctness
  *
  * @author Yauheni Dubovik
+ * {@link #validatePowerConsumption(int)}
+ * {@link #validateWeight(double)}
+ * {@link #validateWidth(int)} )}
+ * {@link #validateHeight(int)}
+ * {@link #validateVolumeMillilitres(int)}
  * @see Validator
  */
 
