@@ -1,7 +1,6 @@
 package com.epam.jwd.entity.appliances;
 
 import com.epam.jwd.entity.enums.Brand;
-import com.epam.jwd.logic.search.SearchCriteria;
 
 public abstract class Appliances {
     private int powerConsumption;
@@ -32,12 +31,6 @@ public abstract class Appliances {
 
     public void setPowerConsumption(int powerConsumption) {
         this.powerConsumption = powerConsumption;
-    }
-
-    //TODO
-    public boolean satisfies(SearchCriteria criteria) {
-//        Open up for extension
-        return criteria.isSatisfiedBy(this);
     }
 
     public int getWidth() {
