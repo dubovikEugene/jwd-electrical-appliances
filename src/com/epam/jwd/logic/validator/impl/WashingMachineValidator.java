@@ -8,6 +8,13 @@ import com.epam.jwd.logic.validator.Validator;
  * and check fields of WashingMachine to correctness
  *
  * @author Yauheni Dubovik
+ * {@link #validatePowerConsumption(int)}
+ * {@link #validateWeight(double)}
+ * {@link #validateWidth(int)}
+ * {@link #validateHeight(int)}
+ * {@link #validateLoadingUpKg(double)}
+ * {@link #validateDepthCm(double)}
+ * {@link #validateSpin(int)}
  * @see Validator
  */
 public class WashingMachineValidator implements Validator<WashingMachine> {

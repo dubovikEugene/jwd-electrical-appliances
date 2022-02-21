@@ -8,6 +8,11 @@ import com.epam.jwd.logic.validator.Validator;
  * and check fields of Fridge to correctness
  *
  * @author Yauheni Dubovik
+ * {@link #validatePowerConsumption(int)}
+ * {@link #validateWeight(double)}
+ * {@link #validateWidth(int)}
+ * {@link #validateHeight(int)}
+ * {@link #validateUsefulVolume(int)}
  * @see Validator
  */
 public class FridgeValidator implements Validator<Fridge> {

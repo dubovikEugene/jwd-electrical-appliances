@@ -8,6 +8,12 @@ import com.epam.jwd.logic.validator.Validator;
  * and check fields of Microwave to correctness
  *
  * @author Yauheni Dubovik
+ * {@link #validatePowerConsumption(int)}
+ * {@link #validateWeight(double)}
+ * {@link #validateWidth(int)}
+ * {@link #validateHeight(int)}
+ * {@link #validateVolumeLitres(int)}
+ * {@link #validateMicrowavesPower(int)}
  * @see Validator
  */
 public class MicrowaveValidator implements Validator<Microwave> {
