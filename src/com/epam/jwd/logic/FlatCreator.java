@@ -58,14 +58,14 @@ public class FlatCreator {
      * @return new Flat with init and valid Appliances
      */
     public Flat createFlat() {
-        ElectricKettle firstElectricKettle = new ElectricKettle(1500,
+        ElectricKettle firstElectricKettle = new ElectricKettle(1600,
                 Brand.BEKO,
-                1.5,
+                3.5,
                 true,
                 15,
                 25,
                 EnergyEfficiency.A_PLUS,
-                1700);
+                1500);
         electricKettleValidator.validate(firstElectricKettle);
 
         ElectricKettle secondElectricKettle = new ElectricKettle(1500,
