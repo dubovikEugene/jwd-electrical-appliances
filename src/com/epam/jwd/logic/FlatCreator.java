@@ -13,14 +13,50 @@ import com.epam.jwd.logic.validator.impl.FridgeValidator;
 import com.epam.jwd.logic.validator.impl.MicrowaveValidator;
 import com.epam.jwd.logic.validator.impl.WashingMachineValidator;
 
+/**
+ * Class for creating flat with all type Appliances
+ * and validate params with validators
+ *
+ * @author yauheni Dubovik
+ */
+
 public class FlatCreator {
+
+    /**
+     * init new Flat
+     */
     private final Flat flat = new Flat();
+
+    /**
+     * init new ElectricKettleValidator
+     */
     private final ElectricKettleValidator electricKettleValidator = new ElectricKettleValidator();
+
+    /**
+     * init new FridgeValidator
+     */
     private final FridgeValidator fridgeValidator = new FridgeValidator();
+
+    /**
+     * init new MicrowaveValidator
+     */
     private final MicrowaveValidator microwaveValidator = new MicrowaveValidator();
+
+    /**
+     * init new WashingMachineValidator
+     */
     private final WashingMachineValidator washingMachineValidator = new WashingMachineValidator();
 
-
+    /**
+     * This method init all Appliances, add they to Flat,
+     * and validate them with validators:
+     * {@link #electricKettleValidator}
+     * {@link #fridgeValidator}
+     * {@link #microwaveValidator}
+     * {@link #washingMachineValidator}
+     *
+     * @return new Flat with init and valid Appliances
+     */
     public Flat createFlat() {
         ElectricKettle firstElectricKettle = new ElectricKettle(1500,
                 Brand.BEKO,
