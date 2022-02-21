@@ -1,5 +1,25 @@
 package com.epam.jwd.logic.search;
 
+/**
+ * Operators what can be used:
+ * {@link #LESS_THAN}
+ * {@link #EQUAL}
+ * {@link #LARGER_THAN}
+ */
 public enum Operator {
-    LESS_THAN, EQUAL, LARGER_THAN
+
+    /**
+     * operator less than something
+     */
+    LESS_THAN,
+
+    /**
+     * operator equal something
+     */
+    EQUAL,
+
+    /**
+     * operator larger than something
+     */
+    LARGER_THAN
 }
